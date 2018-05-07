@@ -1,6 +1,6 @@
 package customers;
 
-public abstract class Customer {
+public class Customer {
 
     private String name;
     private int height;

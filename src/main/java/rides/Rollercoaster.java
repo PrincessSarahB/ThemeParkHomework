@@ -1,7 +1,7 @@
 package rides;
 
 public class Rollercoaster extends Ride {
-    public Rollercoaster(int minHeight, double price) {
-        super(minHeight, price);
+    public Rollercoaster(String name, int minHeight, double price) {
+        super(name, minHeight, price);
     }
 }
