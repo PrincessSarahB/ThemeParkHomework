@@ -20,10 +20,10 @@ public class CustomerTest {
 
     @Before
     public void before(){
-        customer1 = new Customer("Bob", 182, 30.00);
-        customer2 = new Customer("Rita", 153, 5.00);
-        customer3 = new Customer("Davie", 100, 20.00 );
-        customer4 = new Customer("Ella", 65, 3.00 );
+        customer1 = new Customer("Bob", 182, 30.00, 35);
+        customer2 = new Customer("Rita", 153, 5.00, 32);
+        customer3 = new Customer("Davie", 100, 20.00, 10);
+        customer4 = new Customer("Ella", 65, 3.00, 3);
         dropCoaster = new DropCoaster("Drop of Doom", 140, 5.00, 2);
         smallCoaster = new SmallCoaster("Flying Unicorn", 100, 3.00, 4);
         rollercoaster = new Rollercoaster("The Big One", 140, 6.00, 3);
@@ -42,6 +42,11 @@ public class CustomerTest {
     @Test
     public void hasMoney(){
         assertEquals(30.00, customer1.getMoney(), 0.01);
+    }
+
+    @Test
+    public void hasAge(){
+        assertEquals(32, customer2.getAge());
     }
 
     @Test

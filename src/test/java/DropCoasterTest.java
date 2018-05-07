@@ -15,10 +15,10 @@ public class DropCoasterTest {
     @Before
     public void before(){
         dropCoaster = new DropCoaster("Drop of Doom", 140, 5.00, 2);
-        customer = new Customer ("Sarah", 157, 50.00);
-        customer2 = new Customer("Rita", 153, 5.00);
-        customer3 = new Customer("Davie", 100, 20.00 );
-        customer4 = new Customer("Ella", 65, 3.00 );
+        customer = new Customer ("Sarah", 157, 50.00, 30);
+        customer2 = new Customer("Rita", 153, 5.00, 32);
+        customer3 = new Customer("Davie", 100, 20.00, 10 );
+        customer4 = new Customer("Ella", 65, 3.00, 3 );
     }
 
     @Test

@@ -16,10 +16,10 @@ public class SmallCoasterTest {
     @Before
     public void before(){
         smallCoaster = new SmallCoaster("Flying Unicorn", 100, 3.00, 4);
-        customer = new Customer("Sarah", 157, 50.00);
-        customer2 = new Customer("Rita", 153, 5.00);
-        customer3 = new Customer("Davie", 100, 20.00 );
-        customer4 = new Customer("Ella", 65, 3.00 );
+        customer = new Customer("Sarah", 157, 50.00, 30);
+        customer2 = new Customer("Rita", 153, 5.00, 32);
+        customer3 = new Customer("Davie", 100, 20.00, 10);
+        customer4 = new Customer("Ella", 65, 3.00, 3 );
     }
 
     @Test
