@@ -36,13 +36,28 @@ public abstract class Ride {
     }
 
     public ArrayList<Customer> getCustomers() {
-        return customers;
+        ArrayList<Customer> copy = new ArrayList<>(customers);
+        return copy;
     }
 
-//    public boolean customerCanRide(){
-//        if()
-//    }
+    public int countCustomersOnRide(){
 
+        return this.customers.size();
+    }
+
+    public boolean customerCanRide(Customer customer){
+        if((customer.getMoney() >= this.price) && (customer.getHeight() >= this.minHeight) && (countCustomersOnRide() < this.capacity)){
+            return true;
+        }
+        else return false;
+    }
+
+    public void addCustomerToRide(Customer customer){
+        if(customerCanRide(customer)){
+            customer.money -= this.price;
+            this.customers.add(customer);
+        }
+    }
 
 
     }

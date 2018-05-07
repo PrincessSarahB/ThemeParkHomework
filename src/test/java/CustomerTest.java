@@ -71,35 +71,9 @@ public class CustomerTest {
         assertEquals(false, customer4.canPayForRide(dropCoaster));
     }
 
-    @Test
-    public void canRideMoneyTaken(){
-        customer1.canRide(rollercoaster);
-        assertEquals(24.00, customer1.getMoney(), 0.01);
-    }
 
-    @Test
-    public void cannotRideTooShortNoMoneyTaken(){
-        customer3.canRide(rollercoaster);
-        assertEquals(20.00, customer3.getMoney(), 0.01);
-    }
 
-    @Test
-    public void cannotRideTooPoorNoMoneyTaken(){
-        customer2.canRide(rollercoaster);
-        assertEquals(5.00, customer2.getMoney(), 0.01);
-    }
 
-    @Test
-    public void walletDepleted(){
-        customer1.canRide(dropCoaster);
-        customer1.canRide(dropCoaster);
-        customer1.canRide(dropCoaster);
-        customer1.canRide(dropCoaster);
-        customer1.canRide(dropCoaster);
-        customer1.canRide(dropCoaster);
-        assertEquals(0, customer1.getMoney(), 0.01);
-
-    }
 
 
 

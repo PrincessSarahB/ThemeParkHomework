@@ -6,7 +6,7 @@ public class Customer {
 
     private String name;
     private int height;
-    private double money;
+    public double money;
 
     public Customer(String name, int height, double money) {
         this.name = name;
@@ -46,10 +46,6 @@ public class Customer {
     }
 
 
-    public void canRide(Ride ride) {
-        if ((meetsHeightRestriction(ride)) && (canPayForRide(ride))) {
-            this.money -= ride.price;
-        }
-    }
+
 
 }
