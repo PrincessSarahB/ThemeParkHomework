@@ -1,8 +1,10 @@
 package rides;
 
+import customers.Customer;
+
 public abstract class Ride {
-    private int minHeight;
-    private double price;
+    public int minHeight;
+    public double price;
     private String name;
 
     public Ride(String name, int minHeight, double price) {
@@ -22,4 +24,8 @@ public abstract class Ride {
     public String getName() {
         return name;
     }
-}
+
+
+
+    }
+

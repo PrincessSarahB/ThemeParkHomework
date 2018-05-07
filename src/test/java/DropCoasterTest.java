@@ -26,4 +26,6 @@ public class DropCoasterTest {
     public void hasPrice(){
         assertEquals(5.00, dropCoaster.getPrice(), 0.01);
     }
+
+
 }
