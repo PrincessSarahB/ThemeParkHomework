@@ -21,12 +21,12 @@ public class CustomerTest {
     @Before
     public void before(){
         customer1 = new Customer("Bob", 182, 30.00);
-        customer2 = new Customer("Rita", 153, 40.00);
+        customer2 = new Customer("Rita", 153, 5.00);
         customer3 = new Customer("Davie", 100, 20.00 );
         customer4 = new Customer("Ella", 65, 3.00 );
-        dropCoaster = new DropCoaster("Drop of Doom", 140, 5.00);
-        smallCoaster = new SmallCoaster("Flying Unicorn", 100, 3.00);
-        rollercoaster = new Rollercoaster("The Big One", 140, 6.00);
+        dropCoaster = new DropCoaster("Drop of Doom", 140, 5.00, 2);
+        smallCoaster = new SmallCoaster("Flying Unicorn", 100, 3.00, 4);
+        rollercoaster = new Rollercoaster("The Big One", 140, 6.00, 3);
 
     }
     @Test
@@ -75,6 +75,18 @@ public class CustomerTest {
     public void canRideMoneyTaken(){
         customer1.canRide(rollercoaster);
         assertEquals(24.00, customer1.getMoney(), 0.01);
+    }
+
+    @Test
+    public void cannotRideTooShortNoMoneyTaken(){
+        customer3.canRide(rollercoaster);
+        assertEquals(20.00, customer3.getMoney(), 0.01);
+    }
+
+    @Test
+    public void cannotRideTooPoorNoMoneyTaken(){
+        customer2.canRide(rollercoaster);
+        assertEquals(5.00, customer2.getMoney(), 0.01);
     }
 
     @Test

@@ -10,7 +10,7 @@ public class SmallCoasterTest {
 
     @Before
     public void before(){
-        smallCoaster = new SmallCoaster("Flying Unicorn", 100, 3.00);
+        smallCoaster = new SmallCoaster("Flying Unicorn", 100, 3.00, 4);
     }
 
     @Test

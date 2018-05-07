@@ -9,7 +9,7 @@ public class DropCoasterTest {
 
     @Before
     public void before(){
-        dropCoaster = new DropCoaster("Drop of Doom", 140, 5.00);
+        dropCoaster = new DropCoaster("Drop of Doom", 140, 5.00, 2);
     }
 
     @Test
